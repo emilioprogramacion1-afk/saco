@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora IMC</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+
+        <h1 class="text-center">Calculadora IMC</h1>
+        <p class="text-center">Conoce tu resultado</p>
+
+        <div class="card p-4">
+
+            <h4 class="text-center">Datos personales</h4>
+
+            <label class="form-label">Peso (kg)</label>
+            <input type="number" id="peso" class="form-control mb-3" placeholder="Escribe tu peso">
+
+            <label class="form-label">Estatura (metros)</label>
+            <input type="number" id="estatura" class="form-control mb-3" placeholder="Escribe tu estatura">
+
+            <div class="text-center">
+                <button class="btn btn-primary" id="calcular">Calcular IMC</button>
+                <button class="btn btn-secondary" id="reset">Limpiar</button>
+            </div>
+
+            <hr>
+
+            <h4 class="text-center">Mi resultado</h4>
+
+            <h2 class="text-center" id="resultado">0.00</h2>
+
+            <h5 class="text-center" id="clasificacion">Esperando datos...</h5>
+
+        </div>
+
+        <div class="card p-3 mt-4">
+
+            <h4 class="text-center">Clasificación del IMC</h4>
+
+            <table class="table table-bordered text-center">
+
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Clasificación</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="table-info">
+                        <td>Menor a 18.5</td>
+                        <td>Bajo peso</td>
+                    </tr>
+
+                    <tr class="table-success">
+                        <td>18.5 a 24.9</td>
+                        <td>Normal</td>
+                    </tr>
+
+                    <tr class="table-warning">
+                        <td>25 a 29.9</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+
+                    <tr class="table-danger">
+                        <td>30 a 34.9</td>
+                        <td>Obesidad I</td>
+                    </tr>
+
+                    <tr class="table-danger">
+                        <td>35 a 39.9</td>
+                        <td>Obesidad II</td>
+                    </tr>
+
+                    <tr class="table-danger">
+                        <td>40 o más</td>
+                        <td>Obesidad III</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <p class="text-center">
+                <small>Tabla de referencia para adultos.</small>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="masa.js"></script>
+
+</body>
+</html>
